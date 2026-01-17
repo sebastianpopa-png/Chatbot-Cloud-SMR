@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Cloud SMR</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Chatbot Cloud SMR</h1>
+    <!-- Menú de navegación --> 
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li> <li><a href="#" onclick="mostrarSeccion('chat')">Chat</a>
+                </li> 
+                <li>
+                    <a href="#" onclick="mostrarSeccion('acerca')">Acerca de</a>
+                </li> 
+            </ul> 
+        </nav>
+    </header>
+    <button id="toggle-darkmode" onclick="toggleDarkMode()">Modo oscuro</button>
+    <!-- Sección: Inicio --> 
+        <section id="inicio" class="seccion visible"> 
+            <h1>Bienvenido a Chatbot Cloud SMR</h1> 
+            <p> Esta página web utiliza servicios cloud como RapidAPI y GitHub Pages para ofrecer un chatbot capaz de responder dudas básicas de informática. Usa el menú superior para acceder al chat o conocer más sobre el proyecto.</p>
+        </section> 
+        <!-- Sección: Chat --> 
+        <section id="chat" class="seccion"> 
+            <h2>Chatbot</h2> <div id="chat-container"> 
+                <div id="chat-messages"></div> 
+                <div id="chat-input"> 
+                    <input type="text" id="userInput" placeholder="Escribe tu pregunta..."> 
+                    <button onclick="enviarMensaje()">Enviar</button> 
+                </div> 
+                <div id="preguntas-rapidas">
+                    <button onclick="enviarMensaje('¿Qué es una IP?')">¿Qué es una IP?</button>
+                    <button onclick="enviarMensaje('¿Qué es la RAM?')">¿Qué es la RAM?</button>
+                    <button onclick="enviarMensaje('¿Cómo montar un PC?')">Montaje de PC</button>
+                    <button onclick="enviarMensaje('¿Qué es un sistema operativo?')">Sistemas operativos</button>
+                    <button onclick="enviarMensaje('No tengo Internet, ¿qué hago?')">No tengo Internet</button>
+                </div>
+
+            </div> 
+        </section> 
+        <!-- Sección: Acerca de --> 
+         <section id="acerca" class="seccion"> 
+            <h2>Acerca del proyecto</h2> 
+            <p> Este chatbot ha sido desarrollado como práctica del módulo DASP en 1º SMR. Utiliza una API alojada en RapidAPI (SaaS / API as a Service) y se publica mediante GitHub Pages como hosting estático en la nube. </p> 
+        </section>
+</html>
+
